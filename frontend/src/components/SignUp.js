@@ -193,13 +193,13 @@ export const SignUp = () => {
                         <div className='mt-3'>
                             <div className='row mt-3 '>
                                 <div className='col '>
-                                    <input className="form-check-input" type="checkbox" value={false} id="flexCheckDefault1" name="categories" onChange={handleCategoryChange} />
+                                    <input className="form-check-input" type="checkbox" value={'Allopathic'} id="flexCheckDefault1" name="categories" onChange={handleCategoryChange} />
                                     <label className="form-check-label " htmlFor="flexCheckDefault1" style={{ marginLeft: '0.3rem' }}>
                                         Allopathic
                                     </label>
                                 </div>
                                 <div className='col'>
-                                    <input className="form-check-input" type="checkbox" value={false} id="flexCheckDefault2" name="categories" onChange={handleCategoryChange} />
+                                    <input className="form-check-input" type="checkbox" value={'Generic'} id="flexCheckDefault2" name="categories" onChange={handleCategoryChange} />
                                     <label className="form-check-label" htmlFor="flexCheckDefault2" style={{ marginLeft: '0.3rem' }}>
                                         Generic
                                     </label>
@@ -207,13 +207,13 @@ export const SignUp = () => {
                             </div>
                             <div className='row mt-3 '>
                                 <div className='col '>
-                                    <input className="form-check-input" type="checkbox" value={false} id="flexCheckDefault3" name="categories" onChange={handleCategoryChange} />
+                                    <input className="form-check-input" type="checkbox" value={'Surgical & Medical Equipment'} id="flexCheckDefault3" name="categories" onChange={handleCategoryChange} />
                                     <label className="form-check-label" htmlFor="flexCheckDefault3" style={{ marginLeft: '0.3rem' }}>
                                         Surgical & Medical Equipment
                                     </label>
                                 </div>
                                 <div className='col'>
-                                    <input className="form-check-input" type="checkbox" value={false} id="flexCheckDefault4" name="categories" onChange={handleCategoryChange} />
+                                    <input className="form-check-input" type="checkbox" value={'Otc'} id="flexCheckDefault4" name="categories" onChange={handleCategoryChange} />
                                     <label className="form-check-label" htmlFor="flexCheckDefault4" style={{ marginLeft: '0.3rem' }}>
                                         Otc
                                     </label>
@@ -221,13 +221,13 @@ export const SignUp = () => {
                             </div>
                             <div className='row mt-3 '>
                                 <div className='col '>
-                                    <input className="form-check-input" type="checkbox" value={false} id="flexCheckDefault5" name="categories" onChange={handleCategoryChange} />
+                                    <input className="form-check-input" type="checkbox" value={'Ayurvedic'} id="flexCheckDefault5" name="categories" onChange={handleCategoryChange} />
                                     <label className="form-check-label" htmlFor="flexCheckDefault5" style={{ marginLeft: '0.3rem' }}>
                                         Ayurvedic
                                     </label>
                                 </div>
                                 <div className='col'>
-                                    <input className="form-check-input" type="checkbox" value={false} id="flexCheckDefault6" name="categories" onChange={handleCategoryChange} />
+                                    <input className="form-check-input" type="checkbox" value={'Veterinary'} id="flexCheckDefault6" name="categories" onChange={handleCategoryChange} />
                                     <label className="form-check-label" htmlFor="flexCheckDefault6" style={{ marginLeft: '0.3rem' }}>
                                         Veterinary
                                     </label>
@@ -266,29 +266,29 @@ export const SignUp = () => {
                         <h6  >Register As</h6>
                         <div className='d-flex justify-content-between'>
                             <div className="form-check form-check-inline">
-                                <input className="form-check-input" type="radio" id="inlineRadio1" value={false} name="role"
+                                <input className="form-check-input" type="radio" id="inlineRadio1" value={'Manufacturer'} name="role"
 
                                     onChange={handleChange} />
                                 <label className="form-check-label " htmlFor="inlineRadio1" >Manufacturer</label>
                             </div>
                             <div className="form-check form-check-inline">
-                                <input className="form-check-input" type="radio" id="inlineRadio2" value={false} name="role"
+                                <input className="form-check-input" type="radio" id="inlineRadio2" value={'Distributor'} name="role"
 
                                     onChange={handleChange} />
                                 <label className="form-check-label" htmlFor="inlineRadio2">Distributor</label>
                             </div>
                             <div className="form-check form-check-inline">
-                                <input className="form-check-input" type="radio" id="inlineRadio3" value={false} name="role"
+                                <input className="form-check-input" type="radio" id="inlineRadio3" value={'Wholesaler'} name="role"
                                     onChange={handleChange} />
                                 <label className="form-check-label" htmlFor="inlineRadio3">Wholesaler </label>
                             </div>
                             <div className="form-check form-check-inline">
-                                <input className="form-check-input" type="radio" id="inlineRadio4" value={false} name="role"
+                                <input className="form-check-input" type="radio" id="inlineRadio4" value={'Retailer'} name="role"
                                     onChange={handleChange} />
                                 <label className="form-check-label" htmlFor="inlineRadio4">Retailer</label>
                             </div>
                             <div className="form-check form-check-inline">
-                                <input className="form-check-input" type="radio" id="inlineRadio5" value={false} name="role"
+                                <input className="form-check-input" type="radio" id="inlineRadio5" value={'Hospital'} name="role"
                                     onChange={handleChange} />
                                 <label className="form-check-label" htmlFor="inlineRadio5">Hospital</label>
                             </div>
