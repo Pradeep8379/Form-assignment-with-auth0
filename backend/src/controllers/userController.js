@@ -39,43 +39,38 @@ const createUser = async function (req, res) {
   }
 };
 
-// const userLogin = async function (req, res) {
-//   try {
-//     let data = req.body;
+const userLogin = async function (req, res) {
+  try {
+    let data = req.body;
+    // console.log(req.body,45)
+    let { email, start } = data;
 
-//     let { email, password } = data;
+    let user = await userModel.findOne({ email });
+    // console.log(user, 49)
 
-//     let findPassword = await userModel.findOne({ email: email });
-//     let passwordData = await bcrypt.compare(password, findPassword.password);
-//     if (!passwordData) {
-//       return res
-//         .status(401)
-//         .send({ status: false, message: "Invalid credentials" });
-//     }
+    if (!user) {
+      return res
+        .status(401)
+        .send({ status: false, message: "Invalid credentials" });
+    }
+    // let obj=()
+    // let updates=JSON.stringify();
 
-//     let userid = await userModel.findOne({
-//       email: email,
-//       password: findPassword.password,
-//     });
 
-//     // creating Token
-//     let token = jwt.sign(
-//       {
-//         userId: userid._id,
-//       },
-//       "Secret key"
-//     );
-//     let obj = {
-//       userId: userid._id,
-//       token: token,
-//     };
+    const updateUser = await userModel.findOneAndUpdate(
+      { email: email },
+      { $push: { sessions: { start: start, end: new Date(), email: email } } }
+    );
 
-//     return res
-//       .status(200)
-//       .send({ status: true, message: "User login successfull", data: obj });
-//   } catch (err) {
-//     res.status(500).send({ status: false, error: err.message });
-//   }
-// };
+
+
+    return res
+      .status(200)
+      .send({ status: true, message: "User login successfull", data: updateUser });
+  } catch (err) {
+    // console.log(err)
+    res.status(500).send({ status: false, error: err.message });
+  }
+};
 
 module.exports = { createUser, userLogin }

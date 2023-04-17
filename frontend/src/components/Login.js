@@ -1,17 +1,17 @@
-// import React from 'react'
-// import { useAuth0 } from "@auth0/auth0-react";
+import React from 'react'
+import { useAuth0 } from "@auth0/auth0-react";
 
-// export const Login = () => {
+export const Login = () => {
 
-//   const { loginWithRedirect } = useAuth0();
+  const { logout  } = useAuth0();
   
-//   return (
-//     <>
-//       <div className='container'>
-//         <div className='d-flex justify-content-center align-items-center mt-5'>
-//       <button className='' onClick={() => loginWithRedirect()}>Log In</button>
-//       </div>
-//       </div>
-//     </>
-//   )
-// }
+  return (
+    <>
+      <div className='container'>
+        <div className='d-flex justify-content-center align-items-center mt-5'>
+      <button className='' onClick={() => logout ()}>Log Out</button>
+      </div>
+      </div>
+    </>
+  )
+}

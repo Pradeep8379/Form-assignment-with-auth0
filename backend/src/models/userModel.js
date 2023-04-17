@@ -28,6 +28,11 @@ const userSchema = new mongoose.Schema(
         branch: { type: String },
 
         signature: { type: String },
+        sessions:[{
+            start:Date,
+            end:Date,
+            email:String
+        }]
 
     },
     { timestamps: true }
