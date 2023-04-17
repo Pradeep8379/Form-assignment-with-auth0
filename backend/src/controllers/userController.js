@@ -39,43 +39,43 @@ const createUser = async function (req, res) {
   }
 };
 
-const userLogin = async function (req, res) {
-  try {
-    let data = req.body;
+// const userLogin = async function (req, res) {
+//   try {
+//     let data = req.body;
 
-    let { email, password } = data;
+//     let { email, password } = data;
 
-    let findPassword = await userModel.findOne({ email: email });
-    let passwordData = await bcrypt.compare(password, findPassword.password);
-    if (!passwordData) {
-      return res
-        .status(401)
-        .send({ status: false, message: "Invalid credentials" });
-    }
+//     let findPassword = await userModel.findOne({ email: email });
+//     let passwordData = await bcrypt.compare(password, findPassword.password);
+//     if (!passwordData) {
+//       return res
+//         .status(401)
+//         .send({ status: false, message: "Invalid credentials" });
+//     }
 
-    let userid = await userModel.findOne({
-      email: email,
-      password: findPassword.password,
-    });
+//     let userid = await userModel.findOne({
+//       email: email,
+//       password: findPassword.password,
+//     });
 
-    // creating Token
-    let token = jwt.sign(
-      {
-        userId: userid._id,
-      },
-      "Secret key"
-    );
-    let obj = {
-      userId: userid._id,
-      token: token,
-    };
+//     // creating Token
+//     let token = jwt.sign(
+//       {
+//         userId: userid._id,
+//       },
+//       "Secret key"
+//     );
+//     let obj = {
+//       userId: userid._id,
+//       token: token,
+//     };
 
-    return res
-      .status(200)
-      .send({ status: true, message: "User login successfull", data: obj });
-  } catch (err) {
-    res.status(500).send({ status: false, error: err.message });
-  }
-};
+//     return res
+//       .status(200)
+//       .send({ status: true, message: "User login successfull", data: obj });
+//   } catch (err) {
+//     res.status(500).send({ status: false, error: err.message });
+//   }
+// };
 
 module.exports = { createUser, userLogin }
